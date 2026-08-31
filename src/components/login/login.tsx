@@ -23,7 +23,7 @@ function Login() {
   };
 
   const verificarPin = (nuevoPin: string) => {
-    if (nuevoPin === "040825") {
+    if (nuevoPin === "040725") {
       navigate("/home");
     }
   };

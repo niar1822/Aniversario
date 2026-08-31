@@ -9,9 +9,11 @@ export default function CartaPage() {
 
 Quiero que sepas que cada momento contigo se ha convertido en uno de mis recuerdos favoritos.
 
-Gracias por estar a mi lado, por hacerme sonreír y por compartir conmigo tantos momentos hermosos.
+Gracias por estar a mi lado, por hacerme sonreír y por compartir conmigo tantos momentos hermosos,
 
-Te quiero muchísimo ❤️`}
+desde que te conoci, tu has sido siempre mi mayor tesoro, gracias por ser mi mejor recuerdo
+
+Te amo muchísimo Rosie ❤️`}
       />
     </AnimatedLoveBackground>
   );

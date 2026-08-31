@@ -14,23 +14,23 @@ export default function RecuerdosPage() {
         fotos={[
           {
             src: image,
-            caption: "Nuestra primera cita ❤️",
+            caption: "Foto por la que te conoci❤️",
           },
           {
             src: image1,
-            caption: "Tu cumpleaños 🎂",
+            caption: "Foto juntos del 31",
           },
           {
             src: image2,
-            caption: "El viaje a la playa 🌊",
+            caption: "Primer beso del año",
           },
           {
             src: image4,
-            caption: "Aquella tarde de lluvia 🌧️",
+            caption: "Como sera nuestra familia",
           },
           {
             src: image3,
-            caption: "Navidad juntos 🎄",
+            caption: "31 antes de salir",
           },
         ]}
       />
