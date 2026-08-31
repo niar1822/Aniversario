@@ -1,0 +1,50 @@
+.tiempo-page {
+  color: #fff;
+}
+
+.tiempo-titulo {
+  font-family: "monoespacial", serif;
+  color: #f260d0;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+/* Cards transparentes con borde sutil, en vez del fondo blanco de Bootstrap */
+.tiempo-card {
+  background: transparent;
+  border: 1.5px solid rgba(255, 181, 74, 0.4);
+  border-radius: 18px;
+  min-width: 90px;
+  color: #fff;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tiempo-card:hover {
+  border-color: #ffb54a;
+  box-shadow: 0 0 14px rgba(255, 181, 74, 0.5);
+}
+
+.tiempo-card h2 {
+  font-weight: 700;
+  color: #ffb54a;
+}
+
+.tiempo-card span {
+  font-size: 0.85rem;
+  color: #cfc7cd;
+}
+
+/* Botones transparentes a juego */
+.tiempo-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255, 90, 130, 0.5);
+  color: #fff;
+}
+
+.tiempo-btn:hover {
+  border-color: #ff5a82;
+  background: rgba(255, 90, 130, 0.1);
+  color: #fff;
+}

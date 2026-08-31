@@ -1,0 +1,103 @@
+/* ===== Fondo de la página ===== */
+body {
+  background: #0a0510;
+  min-height: 100vh;
+}
+
+/* ===== Tarjeta ===== */
+.pin-card {
+  width: 340px;
+  padding: 40px 28px 32px !important;
+  background: #150910 !important;
+  border: 1.5px solid #ffb54a !important;
+  border-radius: 32px !important;
+  box-shadow:
+    0 0 10px rgba(255, 181, 74, 0.6),
+    0 0 45px rgba(255, 90, 30, 0.35) !important;
+  color: #fff;
+}
+
+/* Ícono del candado */
+.lock-icon {
+  color: #ffb54a;
+  filter: drop-shadow(0 0 8px rgba(255, 181, 74, 0.85));
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Título — serif dorado, dos líneas, mayúsculas */
+.lock-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #f2b660;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.lock-subtitle {
+  font-family: "Poppins", sans-serif;
+  color: #cfc7cd;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 20px !important;
+}
+
+/* ===== Puntos del PIN (huecos, borde rosado) ===== */
+.pin-value {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2b660;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pin-value svg {
+  width: 12px !important;
+  height: 12px !important;
+  color: transparent !important;
+  border: 1.5px solid #b5426e;
+  border-radius: 50%;
+}
+
+/* ===== Botones numéricos ===== */
+.pin-button {
+  width: 78px;
+  height: 78px;
+  background: #180b12 !important;
+  border: 1.5px solid #7a2b46 !important;
+  color: #fff !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.pin-button:hover {
+  border-color: #ffb54a !important;
+  box-shadow: 0 0 10px rgba(255, 181, 74, 0.5);
+}
+
+.pin-button:active {
+  background: rgba(255, 181, 74, 0.12) !important;
+  border-color: #ffb54a !important;
+  box-shadow: 0 0 14px rgba(255, 181, 74, 0.8);
+}
+
+/* C y borrar un poco más apagados, como en la referencia */
+.pin-button.key-muted {
+  color: #cfc7cd !important;
+  font-weight: 600;
+}

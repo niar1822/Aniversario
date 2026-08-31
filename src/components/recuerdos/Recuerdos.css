@@ -1,0 +1,84 @@
+.recuerdos-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  perspective: 1200px;
+  overflow: hidden;
+}
+.recuerdos-titulo {
+  font-family: "Playfair Display", serif;
+  color: #f2b660;
+  font-weight: 700;
+  margin-bottom: 80px;
+} /* Escena */
+.recuerdos-escena {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+} /* Rueda */
+.recuerdos-rueda {
+  position: relative;
+  width: 200px;
+  height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 1.5s ease-in-out;
+} /* Cada recuerdo */
+.recuerdo-item {
+  position: absolute;
+  width: 180px;
+  height: 260px;
+  top: 0;
+  left: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #150910;
+  border: 1.5px solid #ffb54a;
+  box-shadow:
+    0 0 10px rgba(255, 181, 74, 0.6),
+    0 0 35px rgba(255, 90, 30, 0.35);
+  backface-visibility: hidden;
+} /* Foto */
+.recuerdo-item img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+} /* Nota */
+.recuerdo-caption {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  background: #150910;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+} /* Móvil */
+@media (max-width: 576px) {
+  .recuerdos-rueda {
+    transform: scale(0.8);
+  }
+  .recuerdos-titulo {
+    margin-bottom: 40px;
+  }
+}
+.Atras-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255, 90, 130, 0.5);
+  color: #fff;
+}
+
+.Atras-btn:hover {
+  border-color: #ff5a82;
+  background: rgba(255, 90, 130, 0.1);
+  color: #fff;
+}
