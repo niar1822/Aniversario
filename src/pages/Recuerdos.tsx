@@ -14,7 +14,7 @@ export default function RecuerdosPage() {
         fotos={[
           {
             src: image,
-            caption: "Foto por la que te conoci❤️",
+            caption: "Foto por la que me enamore de ti",
           },
           {
             src: image1,
@@ -25,11 +25,11 @@ export default function RecuerdosPage() {
             caption: "Primer beso del año",
           },
           {
-            src: image4,
+            src: image3,
             caption: "Como sera nuestra familia",
           },
           {
-            src: image3,
+            src: image4,
             caption: "31 antes de salir",
           },
         ]}
