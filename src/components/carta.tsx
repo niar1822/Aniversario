@@ -16,11 +16,13 @@ export default function Carta({ texto }: Props) {
   const [textoEscrito, setTextoEscrito] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [reaccionEnviada, setReaccionEnviada] = useState<string | null>(null);
+  const [errorNotificar, setErrorNotificar] = useState<string | null>(null);
 
   const notificar = async (reaccion: (typeof REACCIONES)[number]) => {
     if (enviando || reaccionEnviada) return;
 
     setEnviando(true);
+    setErrorNotificar(null);
     try {
       const res = await fetch("/api/notificar", {
         method: "POST",
@@ -33,9 +35,14 @@ export default function Carta({ texto }: Props) {
 
       if (res.ok) {
         setReaccionEnviada(reaccion.emoji);
+      } else {
+        const data = await res.json().catch(() => null);
+        setErrorNotificar(
+          `Error ${res.status}: ${data?.error ? JSON.stringify(data.error) : res.statusText}`
+        );
       }
-    } catch {
-      // Ignorar errores de red
+    } catch (e) {
+      setErrorNotificar(`Error de red: ${String(e)}`);
     } finally {
       setEnviando(false);
     }
@@ -159,6 +166,11 @@ export default function Carta({ texto }: Props) {
               {reaccionEnviada && (
                 <span className="mt-2" style={{ color: "#ffb54a", fontSize: "0.8rem" }}>
                   ¡Le avisaré a Nasser! ❤️
+                </span>
+              )}
+              {errorNotificar && !reaccionEnviada && (
+                <span className="mt-2" style={{ color: "#ff6b6b", fontSize: "0.75rem", wordBreak: "break-word" }}>
+                  {errorNotificar}
                 </span>
               )}
             </div>
