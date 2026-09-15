@@ -1,12 +1,45 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 type Props = {
   texto: string;
 };
 
+const REACCIONES = [
+  { emoji: "😊", label: "Mi amor está feliz hoy" },
+  { emoji: "😢", label: "Mi amor no se siente bien hoy" },
+  { emoji: "😐", label: "Mi amor está regular hoy" },
+];
+
 export default function Carta({ texto }: Props) {
   const [textoEscrito, setTextoEscrito] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [reaccionEnviada, setReaccionEnviada] = useState<string | null>(null);
+
+  const notificar = async (reaccion: (typeof REACCIONES)[number]) => {
+    if (enviando || reaccionEnviada) return;
+
+    setEnviando(true);
+    try {
+      const res = await fetch("/api/notificar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          emoji: reaccion.emoji,
+          label: reaccion.label,
+        }),
+      });
+
+      if (res.ok) {
+        setReaccionEnviada(reaccion.emoji);
+      }
+    } catch {
+      // Ignorar errores de red
+    } finally {
+      setEnviando(false);
+    }
+  };
 
   useEffect(() => {
     setTextoEscrito("");
@@ -100,18 +133,49 @@ export default function Carta({ texto }: Props) {
           </p>
 
           {/* Firma */}
-          <div className="text-end mt-4">
-            <Link
-              to={"/home"}
-              style={{
-                fontFamily: "Playfair Display, serif",
-                color: "#b5426e",
-                fontSize: "1.1rem",
-                fontStyle: "italic",
-              }}
-            >
-              Con todo mi amor ❤️
-            </Link>
+          <div className="text-end d-flex justify-content-between mt-4">
+            <div className="d-flex flex-column justify-content-end m-0">
+              <span className="fw-bold" style={{ color: "#ba0098" }}>
+                como estas hoy mi amor?
+              </span>
+              <div className="d-flex justify-content-center align-items-center gap-3 mt-2">
+                {REACCIONES.map((r) => (
+                  <motion.div
+                    key={r.emoji}
+                    whileHover={{ scale: 1.2, color: "#ffb54a" }}
+                    whileTap={{ scale: 0.8, color: "#ffb54a" }}
+                    onClick={() => notificar(r)}
+                    style={{
+                      cursor: "pointer",
+                      opacity:
+                        reaccionEnviada && reaccionEnviada !== r.emoji ? 0.4 : 1,
+                    }}
+                    title={r.label}
+                  >
+                    <span>{r.emoji}</span>
+                  </motion.div>
+                ))}
+              </div>
+              {reaccionEnviada && (
+                <span className="mt-2" style={{ color: "#ffb54a", fontSize: "0.8rem" }}>
+                  ¡Le avisaré a Nasser! ❤️
+                </span>
+              )}
+            </div>
+
+            <div className="d-flex justify-content-start ms-3">
+              <Link
+                to={"/home"}
+                style={{
+                  fontFamily: "Playfair Display, serif",
+                  color: "#b5426e",
+                  fontSize: "1.1rem",
+                  fontStyle: "italic",
+                }}
+              >
+                Con todo mi amor ❤️
+              </Link>
+            </div>
           </div>
         </div>
       </div>

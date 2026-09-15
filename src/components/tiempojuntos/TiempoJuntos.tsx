@@ -104,6 +104,9 @@ export default function TiempoJuntos({}: Props) {
             Ver recuerdos
           </Link>
           <Link className="btn tiempo-btn rounded-4" to={"/carta"}>
+            Crear recuerdos
+          </Link>
+          <Link className="btn tiempo-btn rounded-4" to={"/carta"}>
             Leer carta
           </Link>
         </div>
