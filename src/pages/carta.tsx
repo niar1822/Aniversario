@@ -6,14 +6,12 @@ export default function CartaPage() {
     <AnimatedLoveBackground>
       <Carta
         texto={`Rosangel mi amor,
-          hoy como siempre estoy pensando en ti y en lo afortunado que soy de tenerte en mi vida.
-          No tengo palabras para lo arrepentido que me siento por todo lo que te he hecho sentir, pero quiero que sepas que estoy dispuesto a hacer todo lo posible para enmendar mis errores y demostrarte cuánto te amo.
-          Eres la persona mas importante en mi vida y la mujer que hace que cada día valga la pena.
-          Yo aunque te ame, te quiera y te adore, no soy perfecto y me cuesta darme cuenta de mis errores, y de como te hago sentir, por que se que te he lastimado y no quiero que eso vuelva a pasar, quiero que me ayudes a ser mejor persona y a ser el hombre que te mereces, quiero que me ayudes a ser el hombre que te haga feliz y que te haga sentir amada.
-          Te amo con todo mi corazón y quiero pasar el resto de mi vida contigo, quiero que sepas que siempre estaré aquí para ti, apoyándote y amándote en cada paso del camino.
-          Gracias por ser mi compañera, mi amiga y mi amor. 
-          Te amo más de lo que las palabras pueden expresar y siempre lo haré.
-          Att: Nasser un hombre arrepentido❤️`}
+          hoy como todos los dias vengo aqui a espresarte lo que mis acciones no pueden decirte, y es que te amo con todo mi corazon, 
+          eres la mujer mas hermosa del mundo y la que me hace sentir el hombre mas feliz del mundo, gracias por estar a mi lado y por hacerme sentir amado, eres mi todo y siempre lo seras,
+          te amo con todo mi corazon y siempre lo hare, eres esa hermosa flor que nunca se marchita, y el sol de las mañanas ese que me despierta con su gran brillo,
+          te amo mas de lo que las palabras pueban expresar, y mucho mas de lo que mi corazon puede sentir, eres mi todo y siempre lo seras, gracias por ser mi novia y por hacerme sentir amado,
+          te amo.
+          Amor tu novio❤️`}
       />
     </AnimatedLoveBackground>
   );
