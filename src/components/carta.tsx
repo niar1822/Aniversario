@@ -38,7 +38,7 @@ export default function Carta({ texto }: Props) {
       } else {
         const data = await res.json().catch(() => null);
         setErrorNotificar(
-          `Error ${res.status}: ${data?.error ? JSON.stringify(data.error) : res.statusText}`
+          `Error ${res.status}: ${data?.error ? JSON.stringify(data.error) : res.statusText}`,
         );
       }
     } catch (e) {
@@ -143,7 +143,7 @@ export default function Carta({ texto }: Props) {
           <div className="text-end d-flex justify-content-between mt-4">
             <div className="d-flex flex-column justify-content-end m-0">
               <span className="fw-bold" style={{ color: "#ba0098" }}>
-                como estas hoy mi amor?
+                como estas hoy?
               </span>
               <div className="d-flex justify-content-center align-items-center gap-3 mt-2">
                 {REACCIONES.map((r) => (
@@ -155,7 +155,9 @@ export default function Carta({ texto }: Props) {
                     style={{
                       cursor: "pointer",
                       opacity:
-                        reaccionEnviada && reaccionEnviada !== r.emoji ? 0.4 : 1,
+                        reaccionEnviada && reaccionEnviada !== r.emoji
+                          ? 0.4
+                          : 1,
                     }}
                     title={r.label}
                   >
@@ -164,18 +166,39 @@ export default function Carta({ texto }: Props) {
                 ))}
               </div>
               {reaccionEnviada && (
-                <span className="mt-2" style={{ color: "#ffb54a", fontSize: "0.8rem" }}>
+                <span
+                  className="mt-2"
+                  style={{ color: "#ffb54a", fontSize: "0.8rem" }}
+                >
                   ¡Le avisaré a Nasser! ❤️
                 </span>
               )}
               {errorNotificar && !reaccionEnviada && (
-                <span className="mt-2" style={{ color: "#ff6b6b", fontSize: "0.75rem", wordBreak: "break-word" }}>
+                <span
+                  className="mt-2"
+                  style={{
+                    color: "#ff6b6b",
+                    fontSize: "0.75rem",
+                    wordBreak: "break-word",
+                  }}
+                >
                   {errorNotificar}
                 </span>
               )}
             </div>
 
-            <div className="d-flex justify-content-start ms-3">
+            <div className="d-flex justify-content-start ms-3 gap-2">
+              <Link
+                to={"/girasoles"}
+                style={{
+                  fontFamily: "Playfair Display, serif",
+                  color: "#b9be23",
+                  fontSize: "1.1rem",
+                  fontStyle: "italic",
+                }}
+              >
+                Sorpresa
+              </Link>
               <Link
                 to={"/home"}
                 style={{
@@ -185,7 +208,7 @@ export default function Carta({ texto }: Props) {
                   fontStyle: "italic",
                 }}
               >
-                Con todo mi amor ❤️
+                Con amor tu novio ❤️
               </Link>
             </div>
           </div>
