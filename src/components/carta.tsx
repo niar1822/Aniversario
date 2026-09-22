@@ -189,17 +189,6 @@ export default function Carta({ texto }: Props) {
 
             <div className="d-flex justify-content-start ms-3 gap-2">
               <Link
-                to={"/girasoles"}
-                style={{
-                  fontFamily: "Playfair Display, serif",
-                  color: "#b9be23",
-                  fontSize: "1.1rem",
-                  fontStyle: "italic",
-                }}
-              >
-                Sorpresa
-              </Link>
-              <Link
                 to={"/home"}
                 style={{
                   fontFamily: "Playfair Display, serif",

@@ -1,9 +1,16 @@
 import AnimatedLoveBackground from "../components/AnimatedLoveBackground.tsx";
+import BackgroundMusic from "../components/audio/BackgroundMusic.tsx";
 import Carta from "../components/carta.tsx";
 
 export default function CartaPage() {
   return (
     <AnimatedLoveBackground>
+      <BackgroundMusic
+        src="https://www.youtube.com/watch?v=c_lM7xRSUjc&list=RDc_lM7xRSUjc&start_radio=1"
+        autoPlay
+        loop
+        volume={0.35}
+      />
       <Carta
         texto={`Rosangel mi amor,
           Te escribo esta carta mas que para expresarte mi amor, es para pedirte perdon por estar lejos de ti por no darte lo que te mereces,

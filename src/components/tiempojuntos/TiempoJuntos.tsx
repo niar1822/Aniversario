@@ -109,6 +109,9 @@ export default function TiempoJuntos({}: Props) {
           <Link className="btn tiempo-btn rounded-4" to={"/carta"}>
             Leer carta
           </Link>
+          <Link className="btn tiempo-btn rounded-4" to={"/Girasoles"}>
+            Flores
+          </Link>
         </div>
       </div>
     </div>

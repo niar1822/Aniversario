@@ -6,10 +6,17 @@ import image1 from "../assets/img/image1.png";
 import image2 from "../assets/img/image2.png";
 import image3 from "../assets/img/image3.png";
 import image4 from "../assets/img/image4.png";
+import BackgroundMusic from "../components/audio/BackgroundMusic";
 
 export default function RecuerdosPage() {
   return (
     <AnimatedLoveBackground>
+      <BackgroundMusic
+        src="https://www.youtube.com/watch?v=c_lM7xRSUjc&list=RDc_lM7xRSUjc&start_radio=1"
+        autoPlay
+        loop
+        volume={0.35}
+      />
       <Recuerdos
         fotos={[
           {
