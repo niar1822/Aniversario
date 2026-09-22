@@ -6,12 +6,11 @@ export default function CartaPage() {
     <AnimatedLoveBackground>
       <Carta
         texto={`Rosangel mi amor,
-          hoy como todos los dias vengo aqui a espresarte lo que mis acciones no pueden decirte, y es que te amo con todo mi corazon, 
-          eres la mujer mas hermosa del mundo y la que me hace sentir el hombre mas feliz del mundo, gracias por estar a mi lado y por hacerme sentir amado, eres mi todo y siempre lo seras,
-          te amo con todo mi corazon y siempre lo hare, eres esa hermosa flor que nunca se marchita, y el sol de las mañanas ese que me despierta con su gran brillo,
-          te amo mas de lo que las palabras pueban expresar, y mucho mas de lo que mi corazon puede sentir, eres mi todo y siempre lo seras, gracias por ser mi novia y por hacerme sentir amado,
-          te amo.
-          Amor tu novio❤️`}
+          Te escribo esta carta mas que para expresarte mi amor, es para pedirte perdon por estar lejos de ti por no darte lo que te mereces,
+          y sobretodo por no poder estar a tu lado en estos momentos, pero quiero que sepas que te amo con todo mi corazon y que siempre estare pensando en ti.
+          perdon por no poderte dar algo material, por no poder darte tus flores amarillas, por ser tan pesimo, de verdad no tengo nada que pueda darte solo mi alma,
+          se que no es suficiente pero es lo unico que puedo darte ahora, te prometo que estoy trabajando en algo que hara que estar conmigo de verdad valga la pena.
+          Te amo`}
       />
     </AnimatedLoveBackground>
   );
